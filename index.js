@@ -36,24 +36,40 @@ function viewCart() {
        /*var string = cart[i].itemName + " at " + $cart[i].itemPrice + ", "*/
        newarray.push(string)
        //cart.length-1 + " and "
+<<<<<<< HEAD
 }
 return return_string + newarray + ", and " + cart[cart.length-1].itemName + " at $" + cart[cart.length-1].itemPrice + "."
 }
+=======
+>>>>>>> fab2dddb1102526be49d82f7bff170534df48c5a
 }
+/*return return_string + newarray + ", and " + cart[cart.length-1].itemName + " at " + cart[cart.length-1].itemPrice + "."
+}*/
+
 
 function total() {
   // write your code here
+<<<<<<< HEAD
     var t = 0;
 for (let i = 0; i < cart.length; i++) {
   t += cart[i].itemPrice
 }
 return t
+=======
+    var totalarray = [];
+for (let i = 0; i < cart.length; i++) {
+  totalarray.push(price[i])
+}
+return totalarray
+}
+>>>>>>> fab2dddb1102526be49d82f7bff170534df48c5a
 }
 
 
 
 function removeFromCart(item) {
   // write your code here
+<<<<<<< HEAD
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item){
       cart.splice(i,1)
@@ -62,10 +78,19 @@ function removeFromCart(item) {
     }
 
     return "That item is not in your cart."
+=======
+  if (cart === item) {
+  delete cart.item;
+  }
+  else{
+    return "That item is not in your cart."
+  }
+>>>>>>> fab2dddb1102526be49d82f7bff170534df48c5a
 }
 
 function placeOrder(cardNumber) {
   // write your code here
+<<<<<<< HEAD
   if (!cardNumber){
     return "Sorry, we don't have a credit card on file for you."
   }
@@ -73,4 +98,14 @@ function placeOrder(cardNumber) {
     var newcart = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
     cart = [];
     return newcart
+=======
+  if (cardNumber === 83296759){
+    //empty cart
+    var cart = {};
+    return `"Your total cost is" ${totalarray} ", which will be charged to the card 83296759."`
+  }
+  else {
+    return "Sorry, we don't have a credit card on file for you."
+  }
+>>>>>>> fab2dddb1102526be49d82f7bff170534df48c5a
 }
